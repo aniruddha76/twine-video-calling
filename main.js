@@ -153,7 +153,7 @@ let toggleMic = async () => {
         audioTrack.enabled = false;
         document.getElementById('mic-btn').style.backgroundColor = "rgb(255, 80, 80)";
     }else{
-        audioTrack.enabled = true
+        audioTrack.enabled = true;
         document.getElementById('mic-btn').style.backgroundColor = "rgb(179, 102, 249, .9)";
     }
 }
