@@ -81,7 +81,7 @@ let createPeerConnection = async (MemberId) => {
     document.getElementById("user-1").classList.add("smallFrame");
 
     if(!localStream){
-        localStream = await navigator.mediaDevices.getUserMedia({video: true, audio: false});
+        localStream = await navigator.mediaDevices.getUserMedia({video: true, audio: true});
         document.getElementById("user-1").srcObject = localStream;
     }
 
@@ -147,14 +147,14 @@ let toggleCamera = async () => {
 }
 
 let toggleMic = async () => {
-    let audioTrack = localStream.getTracks().find(track => track.kind === 'audio');
+    let audioTrack = localStream.getTracks().find(track => track.kind === "audio");
 
     if(audioTrack.enabled){
         audioTrack.enabled = false;
-        document.getElementById("mic-btn").style.backgroundColor = "rgb(255, 80, 80)"
-    } else {
-        audioTrack.enabled = true;
-        document.getElementById("mic-btn").style.backgroundColor = "rgb(179, 102, 249, .9)"
+        document.getElementById('mic-btn').style.backgroundColor = "rgb(255, 80, 80)";
+    }else{
+        audioTrack.enabled = true
+        document.getElementById('mic-btn').style.backgroundColor = "rgb(179, 102, 249, .9)";
     }
 }
 
