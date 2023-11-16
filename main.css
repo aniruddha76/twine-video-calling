@@ -42,9 +42,9 @@
     transform: translateX(-50%);
     display: flex;
     gap: 1em;
-    padding: 20px;
+    padding: 15px;
     background-color: #0000009e;
-    border-radius: 50px;
+    border-radius: 20px;
 }
 
 .control-container{
